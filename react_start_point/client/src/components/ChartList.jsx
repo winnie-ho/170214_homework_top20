@@ -8,12 +8,12 @@ var ChartList = React.createClass({
       return (
           <Song key = {song.id.label}>
             <div className = "song">
-            <img src = {song["im:image"][2].label}/>
+            <h2>{index + 1}</h2>
+            <img height = "70" src = {song["im:image"][2].label}/>
               <div className = "detail">
-                <p>No: {index + 1}</p>
-                <p>Title: {song["im:name"].label}</p>
-                <p>Artist: {song["im:artist"].label}</p>
-
+                {song["im:artist"].label}:  {song["im:name"].label}
+                <a href = {song.link[1].attributes.href}>Listen</a>
+                {song["im:price"].label}
               </div>
             </div>
           </Song>
